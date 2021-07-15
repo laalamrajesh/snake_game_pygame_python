@@ -372,9 +372,9 @@ def playGame():
             hei=height,
             )
         pygame.display.update()
-        pygame.draw.rect(gameWindow,red,(xApple,yApple,sizeApple,sizeApple))
+        #pygame.draw.rect(gameWindow,red,(xApple,yApple,sizeApple,sizeApple))
 
-        #gameWindow.blit(icon, (xApple, yApple))
+        gameWindow.blit(icon, (xApple, yApple))
         pygame.display.update()
         makeSnake(snakeList, blockSize)
 
@@ -388,9 +388,9 @@ def playGame():
                         * sizeApple)
                 yApple = random.randrange(sizeApple + 2 * blockSize,
                         height - 2 * sizeApple)
-                pygame.draw.rect(gameWindow,red,(xApple,yApple,sizeApple,sizeApple))
+                #pygame.draw.rect(gameWindow,red,(xApple,yApple,sizeApple,sizeApple))
 
-                #gameWindow.blit(icon, (xApple, yApple))
+                gameWindow.blit(icon, (xApple, yApple))
                 snakeLength += 1
                 message(
                     'Score : ' + str(snakeLength - 1),
@@ -412,4 +412,3 @@ pygame.quit()
 
 
 			
-
